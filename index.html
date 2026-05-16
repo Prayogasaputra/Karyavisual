@@ -87,13 +87,13 @@
     }
 
     .gallery {
-      columns: 3 300px;
-      column-gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
 
     .poster {
-      margin-bottom: 20px;
-      break-inside: avoid;
+      min-height: 500px;
       position: relative;
       overflow: hidden;
       border-radius: 18px;
@@ -108,6 +108,8 @@
 
     .poster img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
       transition: 0.5s ease;
     }
@@ -191,6 +193,10 @@
     <div class="gallery" id="gallery"></div>
   </section>
 
+    <div style="text-align:center; color:#777; padding:10px 20px 50px; font-size:0.9rem;">
+    Scroll ke bawah untuk melihat semua karya.
+  </div>
+
   <footer>
     © 2026 — CREATED BY @PRAYOGASAPUTRA
   </footer>
@@ -222,34 +228,24 @@
     const posters = [
 
       {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
+        image: 'images/poster1.jpg',
         title: 'Tentang Waktu'
       },
 
       {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
+        image: 'images/poster2.jpg',
         title: 'Tentang Kehidupan'
       },
 
       {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
+        image: 'images/poster3.jpg',
         title: 'Tentang Menerima'
       },
 
       {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
-        title: 'Tentang cinta'
-      }, 
-      
-      {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
-        title: 'Tentang aku'
-      }, 
-
-      {
-        image: '4561c5a0-2cac-4989-a071-b6def45204a5.png',
-        title: 'Tentang dunia'
-      }, 
+        image: 'images/poster4.jpg',
+        title: 'Tentang Perubahan'
+      }
 
     ];
 
