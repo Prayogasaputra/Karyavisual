@@ -152,6 +152,16 @@
       font-size: 0.9rem;
       letter-spacing: 2px;
     }
+    .music-player{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+    padding: 8px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    }
 
     @keyframes fadeIn {
       from {
@@ -176,7 +186,6 @@
       .section-title h2 {
         font-size: 2.3rem;
       }
-    }
   </style>
 </head>
 <body>
@@ -312,12 +321,12 @@
       `;
     });
   </script>
-
- <audio controls autoplay loop>
-
-<source src="Cinematic Piano Background Music 🎬 Nightfall.mp3" type="audio/mpeg">
-
-</audio> 
+  
+<div class="music-player">
+    <audio controls loop>
+        <source src="Cinematic Piano Background Music 🎬 Nightfall.mp3" type="audio/mp3">
+    </audio>
+</div>
 
 </body>
 </html>
